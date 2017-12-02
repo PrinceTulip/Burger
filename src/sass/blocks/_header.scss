@@ -23,6 +23,10 @@
   margin-bottom:  13px;
   margin-right: -24px;
   list-style: none;
+
+  @include tablets {
+      display: none;
+  }
 }
 
 .navigation__item {
@@ -62,3 +66,5 @@
   margin-bottom: 12px;
   margin-right: -25px;
 }
+
+

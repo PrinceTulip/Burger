@@ -7,6 +7,7 @@ const sassGlob = require('gulp-sass-glob');
 const groupMediaQueries = require('gulp-group-css-media-queries');
 const cleanCSS = require('gulp-cleancss');
 const autoprefixer = require('gulp-autoprefixer');
+const px2rem = require('gulp-smile-px2rem');
 
 
 const concat = require('gulp-concat');
@@ -33,6 +34,7 @@ function styles() {
     .pipe(sass()) // { outputStyle: 'compressed' }
     .pipe(groupMediaQueries())
     .pipe(autoprefixer())
+    .pipe(px2rem())
     .pipe(cleanCSS())
     .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemaps.write('/'))
