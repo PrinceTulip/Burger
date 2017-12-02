@@ -463,7 +463,11 @@ template {
   align-items: center; }
 
 .navigation__list {
-  display: flex; }
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 13px;
+  list-style: none; }
 
 .navigation__item {
   padding-right: 36px; }
@@ -488,9 +492,6 @@ template {
   color: #fff;
   text-transform: uppercase;
   cursor: pointer; }
-
-.navigation__item:first-child {
-  list-style-type: none; }
 
 .promo__desc {
   align-self: center;
