@@ -14,8 +14,20 @@ body {
   box-sizing: border-box;
 }
 
+.wrap {
+  overflow: hidden;
+}
+
 html {
-  font-size: 64px;
+  font-size: 16px;
+
+  @include tablets {
+    font-size: 14px;
+  }
+
+  @include phones{
+    font-size: 12px;
+  }
 }
 
 .container {
@@ -44,8 +56,8 @@ html {
   font-family: "Gagalin", Arial, sans-serif;
   font-size: 72px;
   margin: 0;
-  line-height: 64px;
-  margin-bottom: 80px;
+  line-height: rem(64px);
+  margin-bottom: rem(80px);
   color: #f9b43b;
 }
 

@@ -1,14 +1,16 @@
+@import "settings/mixin";
+@import "settings/variables";
 @import "settings/fonts";
 @import "settings/basic";
 @import "settings/mixin";
 @import "settings/normalize";
-@import "settings/variables";
-@import "blocks/mixin";
 
 @import "blocks/header";
 @import "blocks/promo";
 @import "blocks/features";
 @import "blocks/slider";
+@import "blocks/modal";
+
 
 
 

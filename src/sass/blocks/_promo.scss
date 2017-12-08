@@ -6,30 +6,51 @@
 }
 
 .promo__desc {
-  font-family: "Lifehack", Arial, sans-serif;
+  font-family: $LifeHack;
+  font-size: rem(63px);
+
+  @include phones {
+    font-size: rem(45px);
+    margin-left: rem(-30px);
+  }
 }
 
 .promo__title {
-  font-family: "Gagalin", Arial, sans-serif;
-  font-size: 72px;
+  font-family: $Gagalin;
+  font-size: rem(72px);
   color: $orange;
-  margin-bottom:  40px;
+  margin-bottom:  rem(40px);
+
+  @include phones {
+    font-size: rem(55px);
+    white-space: nowrap;
+    margin-bottom: rem(-10px);
+    margin-left: rem(-25px);
+    margin-top: rem(-40px);
+  }
+
 }
 
 .promo__img {
-  margin-left: 20px;
-  margin-top: -14px;
+  margin-left: rem(20px);
+  margin-top: rem(-14px);
+
+  @include tablets {
+    img {
+      max-width: 100%;
+    }
+  }
 }
 
 .promo__content {
-  font-size: 65px;
+  font-size: rem(65px);
   color: $white;
-  line-height: 60px;
-  margin-top: 120px;
-  margin-left: 13px;
+  line-height: rem(60px);
+  margin-top: rem(120px);
+  margin-left: rem(13px);
 
   @include tablets {
-     margin-top: 50px;
+     margin-top: rem(50px);
      padding: 0 15%;
     }
   }

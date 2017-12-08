@@ -1,0 +1,145 @@
+.burger-modal__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+}
+
+.burger-modal__link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 24px;
+  color: $white;
+  font-family: $Ubuntu;
+  text-transform: uppercase;
+  margin-bottom: rem(62px);
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: rem(6px);
+    height: rem(6px);
+    top: rem(50px);
+    left: rem(35px);
+    background: $white;
+    border-radius: 50%;
+  }
+}
+
+.burger-modal__item--fd .burger-modal__link {
+  &::after {
+    top: rem(50px);
+    left: rem(70px);
+  }
+}
+
+.burger-modal__item--sd .burger-modal__link {
+  &::after {
+    top: 50px;
+    left: 45px;
+  }
+}
+
+.burger-modal__item--td .burger-modal__link {
+  &::after {
+    top: rem(50px);
+    left: rem(45px);
+  }
+}
+
+.burger-modal__item--od .burger-modal__link {
+  &::after {
+    top: rem(50px);
+    left: rem(115px);
+  }
+}
+
+.burger-modal__item--vd .burger-modal__link {
+  &::after {
+    background: transparent;
+    top: rem(50px);
+    left: rem(59px);
+  }
+}
+
+.burger-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba($black, .7);
+  animation-name: bounce;
+  animation-duration: 0.3s;
+  z-index: 50;
+}
+
+.burger-modal__menu {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+
+.modal-show {
+  display: block;
+}
+
+@keyframes bounce {
+  0% {transform: translateY(-2000px); }
+  100% {transform: translateY(0); }
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: rem(38px);
+  font-size: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  &::after {
+   content: '';
+   position: absolute;
+   top: rem(25px);
+   left: rem(15px);
+   width: rem(25px);
+   height: rem(4px);
+   background: #959698;
+   border-radius: rem(2px);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: rem(25px);
+    left: rem(15px);
+    width: rem(25px);
+    height: rem(4px);
+    background: #959698;
+    border-radius: rem(2px);
+  }
+}
+
+.btn-close::before {
+    transform: rotate(45deg);
+  }
+
+.btn-close::after {
+    transform: rotate(-45deg);
+  }
+
+
+
+
+

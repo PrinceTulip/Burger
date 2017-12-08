@@ -1,33 +1,218 @@
 .slider {
   background: url("../img/background-slider.png");
   background-size: cover;
+  padding: rem(90px) rem(0px);
 }
 
-.slide {
-  padding-top: 90px;
-}
-
-.slide-img__btn {
+.structure {
   position: relative;
-  padding: 38.5px 24px;
   background-color: rgba(227,80,40, .4);
-  text-decoration: none;
-  font-family: Gagalin;
-  font-size: 14px;
-  color: $white;
-  border-radius: 4px;
+  font-family: $Gagalin;
+  border-radius: rem(6px);
+  width: rem(90px);
+  height: rem(90px);
+  text-align: center;
 
+}
+
+.structure-left {
+  padding-top: rem(8px);
+  border-radius: rem(6px);
+  padding-bottom: rem(5px);
+
+  &:hover {
+    cursor: pointer;
+    background: #e35028;
+  }
+}
+
+.structure:hover .structure-right {
+  display: block;
+}
+
+.structure-right {
+  display: none;
+  position: absolute;
+  background: $white;
+  opacity: 0.9;
+  color: $black;
+  border-radius: rem(6px);
+  top: rem(0px);
+  left: rem(90px);
+  padding: rem(9px) rem(25px);
+  width: rem(270px);
+}
+
+.structure__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: rem(20px);
+  padding-top: rem(20px);
+}
+
+.structure__product, .structure__weight {
+  font-family: $Ubuntu;
+  color: $black;
+  font-size: rem(14px);
+}
+
+.structure__product {
+  position: relative;
+  padding-left: rem(62px);
+  font-weight: 500;
+}
+
+.structure__product--beef::after {
+  position: absolute;
+  content: '';
+  top:  rem(-7px);
+  left: rem(-5px);
+  width: rem(50px);
+  height: rem(40px);
+  background: url(../img/beef.svg) no-repeat;
+}
+
+.structure__product--buns::after {
+  position: absolute;
+  content: '';
+  top:  rem(-7px);
+  left: rem(-5px);
+  width: rem(50px);
+  height: rem(40px);
+  background: url(../img/buns.svg) no-repeat;
+}
+
+.structure__product--salad::after {
+  position: absolute;
+  content: '';
+  top:  rem(-7px);
+  left: rem(-5px);
+  width: rem(50px);
+  height: rem(40px);
+  background: url(../img/salad.svg) no-repeat;
+}
+
+.structure__product--sauce::after {
+  position: absolute;
+  content: '';
+  top:  rem(-7px);
+  left: rem(-5px);
+  width: rem(50px);
+  height: rem(40px);
+  background: url(../img/sauce.svg) no-repeat;
+}
+
+.structure__product--vegetables::after {
+   position: absolute;
+   content: '';
+   top:   rem(-7px);
+   left:  rem(-5px);
+   width:  rem(50px);
+   height: rem(40px);
+   background: url(../img/cucumber.svg) no-repeat;
+ }
+
+.structure__product--cheese::after {
+  position: absolute;
+  content: '';
+  top:  rem(-7px);
+  left: rem(-5px);
+  width: rem(50px);
+  height: rem(40px);
+  background: url(../img/cheese.svg) no-repeat;
+}
+
+.structure__weight {
+  font-weight: 300;
+}
+
+.structure-burger {
+  margin-bottom: rem(25px);
+  margin-left: rem(-35px);
+  margin-top: rem(-19px);
+}
+
+.structure-calories {
+  position: relative;
+  font-family: $Gagalin;
+  color: $white;
+  opacity: .5;
+  display: inline-block;
+  margin-left: rem(16px);
+  margin-top: rem(-13px);
+  
   &::after {
     position: absolute;
     content: '';
-    width: 50px;
-    height: 50px;
-    top: 10px;
-    left: 0;
-    background: url("../img/burger.svg") no-repeat;
-    
-    
+    top:  rem(-25px);
+    left:  rem(-15px);
+    width: rem(60px);
+    height: rem(60px);
+    background: url("../img/kkal.svg") no-repeat;
   }
-
 }
+
+.structure__number {
+  font-size: rem(20px);
+  margin-bottom: rem(10px);
+}
+
+.structure__kkal {
+  font-size: rem(14px);
+}
+
+.slider__title {
+  color: $white;
+  margin-top: rem(-10px);
+  margin-left: rem(10px);
+}
+
+.slider__text {
+  margin-left: rem(11px);
+  margin-top: rem(-41px);
+  font-size: rem(14px);
+  margin-bottom: rem(35px);
+  width: rem(500px);
+}
+
+.slider__value {
+  font-family: $Gagalin;
+  font-size: rem(72px);
+  font-weight: 400;
+  color: #e35028;
+  margin-right: rem(10px);
+  margin-top: rem(9px);
+  margin-left: rem(7px);
+}
+
+.slider__currency {
+  font-family: $Gagalin;
+  font-size: rem(30px);
+  font-weight: 400;
+  color: #e35028;
+  margin-top: rem(25px);
+  margin-left: rem(-6px);
+}
+
+.slider__order {
+  margin-top: rem(24px);
+  margin-left: rem(25px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

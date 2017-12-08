@@ -1,6 +1,6 @@
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
 }
 
 .main {
@@ -9,7 +9,7 @@
 }
 
 .main-header {
-  padding-top: 10px;
+  padding-top: rem(10px);
 }
 
 .header-main-row {
@@ -20,8 +20,8 @@
   display: flex;
   padding: 0;
   margin: 0;
-  margin-bottom:  13px;
-  margin-right: -24px;
+  margin-bottom:  rem(13px);
+  margin-right: rem(-24px);
   list-style: none;
 
   @include tablets {
@@ -31,16 +31,16 @@
 
 .navigation__item {
   position: relative;
-  padding-right: 16px;
-  margin-right: 20px;
+  padding-right: rem(16px);
+  margin-right: rem(20px);
 
   &::after {
     position: absolute;
     content: '';
-    top: 10px;
-    right: -3px;
-    width: 4px;
-    height: 4px;
+    top: rem(10px);
+    right: rem(-3px);
+    width: rem(4px);
+    height: rem(4px);
     background: #fff;
     border-radius: 50%;
   }
@@ -53,18 +53,73 @@
 .navigation__link {
   text-decoration: none;
   color: $white;
-  font-size: 13px;
+  font-size: rem(13px);
   text-transform: uppercase;
   font-weight: 500;
 }
 
 .logo {
   margin-right: auto;
+  z-index: 100;
 }
 
 .order {
-  margin-bottom: 12px;
-  margin-right: -25px;
+  position: relative;
+  margin-bottom: rem(12px);
+  margin-right: rem(-25px);
 }
+  
+  @include phones {
+    display: block;
+  }
+  
+  @include tablets {
+    display: block;
+  }
+
+
+.btn-burger {
+  opacity: 0;
+  @include  tablets {
+    opacity: 1;
+    position: relative;
+    border: none;
+    width: rem(24px);
+    height: rem(4px);
+    top: rem(-5px);
+    left: rem(0px);
+    background: $white;
+    border-radius: rem(2px);
+    outline: none;
+    cursor: pointer;
+    margin-left: rem(15px);
+    margin-right: rem(30px);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: rem(24px);
+      height: rem(4px);
+      top: rem(9px);
+      left: rem(0px);
+      background: $white;
+      border-radius: rem(10px);
+
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: rem(24px);
+      height: rem(4px);
+      top: (-8px);
+      left: rem(0px);
+      background: $white;
+      border-radius: rem(10px);
+    }
+  }
+}
+
+
 
 

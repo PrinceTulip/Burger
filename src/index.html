@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
+<div class="wrap">
 <section class="main section">
   <header class="main-header">
     <div class="container">
@@ -51,6 +52,7 @@
           <button class="button-order btn">
             Заказать
           </button>
+          <button class="btn-burger"></button>
         </div>
       </div>
     </div>
@@ -83,34 +85,40 @@
         <div class="feature__img">
           <img src="img/meat.svg" alt="картинка-мясо">
         </div>
-        <div class="features__title">
-          100% свежее мясо
-        </div>
-        <div class="features__desc">
-          Драма представляет собой деструктивный<br> цикл. Анапест представляет собой анапест.<br> Ямб неравномерен.
+        <div class="features__content">
+          <div class="features__title">
+            100% свежее мясо
+          </div>
+          <div class="features__desc">
+            Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+          </div>
         </div>
       </div>
       <div class="features__item">
-        <div class="feature__img">
+        <div class="feature__img feature__img--mr">
           <img src="img/hand.svg" alt="картинка-мясо">
         </div>
-        <div class="features__title">
-          Ручная  сборкa
-        </div>
-        <div class="features__desc">
-          Драма представляет собой деструктивный<br> цикл. Анапест представляет собой анапест.<br> Первое полустишие притягивает сюжетный<br> реформаторский пафос.
+        <div class="features__content">
+          <div class="features__title">
+            Ручная  сборкa
+          </div>
+          <div class="features__desc">
+            Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
+          </div>
         </div>
       </div>
       <div class="features__item">
         <div class="feature__img">
           <img src="img/natural.svg" alt="картинка-мясо">
         </div>
-        <div class="features__title">
-          Натуральныe<br>
-          ингредиенты
-        </div>
-        <div class="features__desc">
-          Драма представляет собой деструктивный<br> цикл. Анапест представляет собой анапест.
+        <div class="features__content">
+          <div class="features__title features__title--mr">
+              Натуральныe
+              ингредиенты
+            </div>
+          <div class="features__desc">
+            Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+          </div>
         </div>
       </div>
     </div>
@@ -119,55 +127,131 @@
 <section class="slider section">
   <div class="container">
       <div class="row slider-row">
-        <div class="slider-left">
-            <a href="#" class="slider__btn">
-              Состав
-            </a>
-          <div class="slider__dropdown">
-            <table>
-              <tr>
-                <td>Говядина</td>
-                <td>300г</td>
-              </tr>
-              <tr>
-                <td>Булочки</td>
-                <td>100г</td>
-              </tr>
-              <tr>
-                <td>Зелень</td>
-                <td>70г</td>
-              </tr>
-              <tr>
-                <td>Cоус</td>
-                <td>150г</td>
-              </tr>
-              <tr>
-                <td>Овощи</td>
-                <td>200г</td>
-              </tr>
-              <tr>
-                <td>Cыр</td>
-                <td>80г</td>
-              </tr>
-            </table>
-          </div>
-          <img class="slider__burger" src="img/blackburger-img.png" alt="черный бургер картинка">
-        </div>
-        <div class="slider-right">
-          <div class="section-title slider__title">
-            Dark BEEF<br>
-            Burger
-          </div>
-          <div class="slider__text">
-            Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
-          </div>
-          <div class="slider__price">
-            <div class="slider__value">500</div>
-            <div class="slider__currency">рублей</div>
-          </div>
-        </div>
+            <div class="slider-left">
+              <div class="structure">
+                <div class="structure-left">
+                  <img class="structure__img" src="img/burger.svg" alt="картинка-бургер">
+                  <div class="structure-text">Состав</div>
+                </div>
+                <div class="structure-right">
+                  <div class="structure__item">
+                    <div class="structure__product structure__product--beef">
+                      Говядина
+                    </div>
+                    <div class="structure__weight">
+                      300г
+                    </div>
+                  </div>
+                  <div class="structure__item">
+                    <div class="structure__product structure__product--buns">
+                      Булочки
+                    </div>
+                    <div class="structure__weight">
+                      100г
+                    </div>
+                  </div>
+                  <div class="structure__item">
+                    <div class="structure__product structure__product--salad">
+                      Зелень
+                    </div>
+                    <div class="structure__weight">
+                      70г
+                    </div>
+                  </div>
+                  <div class="structure__item">
+                    <div class="structure__product structure__product--sauce">
+                      Соус
+                    </div>
+                    <div class="structure__weight">
+                      150г
+                    </div>
+                  </div>
+                  <div class="structure__item">
+                    <div class="structure__product structure__product--vegetables">
+                      Овощи
+                    </div>
+                    <div class="structure__weight">
+                      200г
+                    </div>
+                  </div>
+                  <div class="structure__item">
+                    <div class="structure__product structure__product--cheese">
+                      Сыр
+                    </div>
+                    <div class="structure__weight">
+                      80г
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="structure-burger">
+                <img class="structure__img" src="img/blackburger-img.png" alt="черный бургер картинка">
+              </div>
+              <div class="structure-calories">
+                <div class="structure__number">
+                  1200
+                </div>
+                <div class="structure__kkal">
+                  ккал
+                </div>
+              </div>
+            </div>
+            <div class="slider-right">
+              <div class="section-title slider__title">
+                Dark BEEF<br>
+                Burger
+              </div>
+              <div class="slider__text">
+                Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+              </div>
+              <div class="slider__price">
+                <div class="row slider-row">
+                  <div class="slider__value">500</div>
+                  <div class="slider__currency">рублей</div>
+                  <div class="slider__order">
+                    <button class="button-order btn">
+                      Заказать
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
       </div>
   </div>
 </section>
+</div>
+<div class="burger-modal">
+  <button class="btn-close"></button>
+  <div class="burger-modal__menu">
+    <ul class="burger-modal__list">
+      <li class="burger-modal__item burger-modal__item--fd">
+        <a class="burger-modal__link" href="#">Почему мы</a>
+      </li>
+      <li class="burger-modal__item">
+        <a class="burger-modal__link" href="#">Меню</a>
+      </li>
+      <li class="burger-modal__item burger-modal__item--sd">
+        <a class="burger-modal__link" href="#">Советы</a>
+      </li>
+      <li class="burger-modal__item burger-modal__item--td">
+        <a class="burger-modal__link" href="#">Кто мы</a>
+      </li>
+      <li class="burger-modal__item burger-modal__item--od">
+        <a class="burger-modal__link" href="#">Свяжитесь с нами</a>
+      </li>
+      <li class="burger-modal__item burger-modal__item--vd">
+        <a class="burger-modal__link " href="#">Контакты</a>
+      </li>
+    </ul>
+  </div>
+</div>
 </body>
+<div hidden>
+  <svg>
+    <g id="beef">
+
+    </g>
+  </svg>
+</div>
+<script src="js/main.min.js"></script>
 </html>

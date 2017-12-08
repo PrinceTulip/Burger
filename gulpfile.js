@@ -4,21 +4,14 @@ const gulp = require('gulp');
 
 const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
-const groupMediaQueries = require('gulp-group-css-media-queries');
 const cleanCSS = require('gulp-cleancss');
 const autoprefixer = require('gulp-autoprefixer');
-const px2rem = require('gulp-smile-px2rem');
 
 
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
-const babel = require('gulp-babel');
-
 const rename = require('gulp-rename');
-const sourcemaps = require('gulp-sourcemaps');
-const replace = require('gulp-replace');
 const del = require('del');
-const plumber = require('gulp-plumber');
 const browserSync = require('browser-sync').create();
 
 const paths =  {
@@ -28,47 +21,34 @@ const paths =  {
 
 function styles() {
   return gulp.src(paths.src + 'sass/main.scss')
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
     .pipe(sassGlob())
     .pipe(sass()) // { outputStyle: 'compressed' }
-    .pipe(groupMediaQueries())
     .pipe(autoprefixer())
-    .pipe(px2rem())
     .pipe(cleanCSS())
     .pipe(rename({ suffix: ".min" }))
-    .pipe(sourcemaps.write('/'))
     .pipe(gulp.dest(paths.build + 'css/'))
 }
 
 function scripts() {
   return gulp.src(paths.src + 'js/*.js')
-    .pipe(plumber())
-    .pipe(babel({
-      presets: ['env']
-    }))
     .pipe(uglify())
-    .pipe(concat('script.min.js'))
+    .pipe(concat('main.min.js'))
     .pipe(gulp.dest(paths.build + 'js/'))
 }
 
 function htmls() {
   return gulp.src(paths.src + '*.html')
-    .pipe(plumber())
-    .pipe(replace(/\n\s*<!--DEV[\s\S]+?-->/gm, ''))
     .pipe(gulp.dest(paths.build));
 }
 
 
 function img() {
     return gulp.src(paths.src + 'img/**/*')
-        .pipe(plumber())
         .pipe(gulp.dest(paths.build + "img"));
 }
 
 function fonts() {
     return gulp.src(paths.src + 'fonts/**/*')
-        .pipe(plumber())
         .pipe(gulp.dest(paths.build + "fonts"));
 }
 

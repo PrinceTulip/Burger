@@ -1,40 +1,85 @@
 .features {
   background: url("../img/background-features.png");
   background-size: cover;
-  padding-top: 75px;
-  padding-bottom: 88px;
+  padding-top: rem(75px);
+  padding-bottom: rem(88px);
 
+  @include phones {
+    padding-top: rem(40px);
+  }
 }
 
 .features-row {
   justify-content: space-between;
   align-items: baseline;
+  text-align: center;
+
+  @include phones {
+    flex-direction: column;
+    text-align: left;
+  }
 }
 
 .section-title--pos_center {
   color: $black;
   text-align: center;
+
+  @include phones {
+    font-size: rem(60px);
+    margin-left: rem(20px);
+    margin-bottom: rem(20px);
+  }
 }
 
 .features__title {
   color: #2f3234;
-  font-family: "Lifehack", Arial, sans-serif;
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 14px;
-  margin-left: 3px;
+  font-family: $LifeHack;
+  font-size: rem(24px);
+  margin-bottom: rem(14px);
+  margin-left: rem(3px);
+
+  @include phones {
+    white-space: nowrap;
+    font-size: rem(22px);
+  }
 }
 
 .features__desc {
   color: #2f3234;
-  font-family: "Ubuntu", Arial, sans-serif;
-  font-size: 14px;
-  text-align: center;
+  font-family: $Ubuntu;
+  font-size: rem(14px);
+
 }
 
 .feature__img {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: rem(30px);
+
+  @include phones {
+    margin-right: rem(10px);
+    margin-bottom: rem(0px);
+  }
+}
+
+.features__item {
+  @include phones {
+    display: flex;
+    width: 100%;
+    margin-bottom: rem(10px);
+  }
+}
+
+.feature__img--mr {
+  @include phones {
+    margin-right: rem(30px);
+  }
+}
+
+.features__title--mr {
+  @include phones {
+    margin-left: rem(-19px);
+  }
+
 }
 
 
