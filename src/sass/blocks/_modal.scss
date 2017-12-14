@@ -5,6 +5,7 @@
   justify-content: center;
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 .burger-modal__link {
@@ -37,14 +38,14 @@
 .burger-modal__item--fd .burger-modal__link {
   &::after {
     top: rem(50px);
-    left: rem(70px);
+    left: rem(75px);
   }
 }
 
 .burger-modal__item--sd .burger-modal__link {
   &::after {
     top: 50px;
-    left: 45px;
+    left: 40px;
   }
 }
 
@@ -58,7 +59,7 @@
 .burger-modal__item--od .burger-modal__link {
   &::after {
     top: rem(50px);
-    left: rem(115px);
+    left: rem(125px);
   }
 }
 
@@ -66,7 +67,7 @@
   &::after {
     background: transparent;
     top: rem(50px);
-    left: rem(59px);
+    left: rem(29px);
   }
 }
 
@@ -81,12 +82,25 @@
   animation-name: bounce;
   animation-duration: 0.3s;
   z-index: 50;
+
+  @include phones {
+    font-size: rem(24px);
+    white-space: nowrap;
+  }
 }
 
 .burger-modal__menu {
   position: absolute;
   top: 20%;
   left: 30%;
+
+  @include tablets {
+    left: 35%;
+  }
+
+  @include phones {
+    left: 18%;
+  }
 }
 
 .modal-show {

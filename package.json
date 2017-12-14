@@ -22,6 +22,7 @@
     "gulp-pxtorem": "^3.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
+    "gulp-rigger": "^0.5.8",
     "gulp-sass": "^3.1.0",
     "gulp-sass-glob": "^1.0.8",
     "gulp-sourcemaps": "^2.6.1",
@@ -29,6 +30,7 @@
   },
   "dependencies": {
     "gulp-rem-to-px": "^1.0.1",
-    "gulp-smile-px2rem": "^0.1.0"
+    "gulp-smile-px2rem": "^0.1.0",
+    "jquery": "^3.2.1"
   }
 }

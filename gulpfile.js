@@ -6,6 +6,7 @@ const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
 const cleanCSS = require('gulp-cleancss');
 const autoprefixer = require('gulp-autoprefixer');
+const rigger = require('gulp-rigger');
 
 
 const concat = require('gulp-concat');
@@ -25,6 +26,7 @@ function styles() {
     .pipe(sass()) // { outputStyle: 'compressed' }
     .pipe(autoprefixer())
     .pipe(cleanCSS())
+    .pipe(rigger())
     .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest(paths.build + 'css/'))
 }

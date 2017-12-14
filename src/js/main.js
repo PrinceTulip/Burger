@@ -10,3 +10,11 @@ close.addEventListener('click', function (evt) {
     evt.preventDefault();
     modal.classList.remove('modal-show');
 });
+
+
+
+    $(document).ready(function(){
+        $('.slider-wrapper').bxSlider({
+    });
+    });
+

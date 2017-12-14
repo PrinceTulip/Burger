@@ -2,6 +2,10 @@
   background: url("../img/background-slider.png");
   background-size: cover;
   padding: rem(90px) rem(0px);
+
+  @include tablets {
+    padding: rem(110px) rem(0px);
+  }
 }
 
 .structure {
@@ -13,17 +17,20 @@
   height: rem(90px);
   text-align: center;
 
+  &:hover {
+    cursor: pointer;
+    background: #e35028;
+  }
+
+  @include tablets {
+    margin-left: rem(120px);
+  }
 }
 
 .structure-left {
   padding-top: rem(8px);
   border-radius: rem(6px);
   padding-bottom: rem(5px);
-
-  &:hover {
-    cursor: pointer;
-    background: #e35028;
-  }
 }
 
 .structure:hover .structure-right {
@@ -41,6 +48,7 @@
   left: rem(90px);
   padding: rem(9px) rem(25px);
   width: rem(270px);
+  cursor: default;
 }
 
 .structure__item {
@@ -69,8 +77,8 @@
   content: '';
   top:  rem(-7px);
   left: rem(-5px);
-  width: rem(50px);
-  height: rem(40px);
+  width: rem(60px);
+  height: rem(50px);
   background: url(../img/beef.svg) no-repeat;
 }
 
@@ -79,8 +87,8 @@
   content: '';
   top:  rem(-7px);
   left: rem(-5px);
-  width: rem(50px);
-  height: rem(40px);
+  width: rem(60px);
+  height: rem(50px);
   background: url(../img/buns.svg) no-repeat;
 }
 
@@ -89,8 +97,8 @@
   content: '';
   top:  rem(-7px);
   left: rem(-5px);
-  width: rem(50px);
-  height: rem(40px);
+  width: rem(60px);
+  height: rem(50px);
   background: url(../img/salad.svg) no-repeat;
 }
 
@@ -99,8 +107,8 @@
   content: '';
   top:  rem(-7px);
   left: rem(-5px);
-  width: rem(50px);
-  height: rem(40px);
+  width: rem(60px);
+  height: rem(50px);
   background: url(../img/sauce.svg) no-repeat;
 }
 
@@ -109,8 +117,8 @@
    content: '';
    top:   rem(-7px);
    left:  rem(-5px);
-   width:  rem(50px);
-   height: rem(40px);
+   width:  rem(60px);
+   height: rem(50px);
    background: url(../img/cucumber.svg) no-repeat;
  }
 
@@ -119,8 +127,8 @@
   content: '';
   top:  rem(-7px);
   left: rem(-5px);
-  width: rem(50px);
-  height: rem(40px);
+  width: rem(60px);
+  height: rem(50px);
   background: url(../img/cheese.svg) no-repeat;
 }
 
@@ -132,6 +140,14 @@
   margin-bottom: rem(25px);
   margin-left: rem(-35px);
   margin-top: rem(-19px);
+
+  @include tablets {
+    img {
+      max-width: 100%;
+    }
+    margin-top: rem(50px);
+    margin-left: rem(-80px);
+  }
 }
 
 .structure-calories {
@@ -148,25 +164,47 @@
     content: '';
     top:  rem(-25px);
     left:  rem(-15px);
-    width: rem(60px);
-    height: rem(60px);
+    width: rem(80px);
+    height: rem(80px);
     background: url("../img/kkal.svg") no-repeat;
+  }
+
+  @include tablets {
+    &::after {
+      top: rem(8px);
+      left: rem(-80px);
+    }
   }
 }
 
 .structure__number {
   font-size: rem(20px);
   margin-bottom: rem(10px);
+
+  @include tablets {
+      margin-top: rem(35px);
+      margin-left: rem(-65px);
+  }
 }
 
 .structure__kkal {
   font-size: rem(14px);
+
+  @include tablets {
+    margin-top: rem(-0px);
+    margin-left: rem(-65px);
+  }
 }
 
 .slider__title {
   color: $white;
   margin-top: rem(-10px);
   margin-left: rem(10px);
+
+  @include tablets {
+    text-align: center;
+    margin-bottom: rem(34px);
+  }
 }
 
 .slider__text {
@@ -175,6 +213,17 @@
   font-size: rem(14px);
   margin-bottom: rem(35px);
   width: rem(500px);
+  font-weight: 300;
+  font-family: $Ubuntu;
+
+  @include tablets {
+    text-align: center;
+    min-width: rem(500px);
+    margin: 0 auto;
+    margin-bottom: rem(50px);
+
+
+  }
 }
 
 .slider__value {
@@ -200,6 +249,30 @@
   margin-top: rem(24px);
   margin-left: rem(25px);
 }
+
+.slider-left {
+  @include tablets {
+    display: flex;
+  }
+}
+
+.slider-row {
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.price-row {
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
 
 
 
