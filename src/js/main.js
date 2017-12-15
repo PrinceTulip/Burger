@@ -13,8 +13,15 @@ close.addEventListener('click', function (evt) {
 
 
 
-    $(document).ready(function(){
-        $('.slider-wrapper').bxSlider({
-    });
-    });
+$(document).ready(function(){
+    $('.slider').slick({
+
+});
+});
+
+$('.multiple-items').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3
+});
 

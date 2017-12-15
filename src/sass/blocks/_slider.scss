@@ -22,8 +22,10 @@
     background: #e35028;
   }
 
-  @include tablets {
-    margin-left: rem(120px);
+  @include phones {
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 3px;
   }
 }
 
@@ -31,6 +33,11 @@
   padding-top: rem(8px);
   border-radius: rem(6px);
   padding-bottom: rem(5px);
+
+  @include phones {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
 }
 
 .structure:hover .structure-right {
@@ -139,7 +146,6 @@
 .structure-burger {
   margin-bottom: rem(25px);
   margin-left: rem(-35px);
-  margin-top: rem(-19px);
 
   @include tablets {
     img {
@@ -147,6 +153,10 @@
     }
     margin-top: rem(50px);
     margin-left: rem(-80px);
+  }
+
+  @include phones {
+    margin-left: rem(-140px);
   }
 }
 
@@ -171,7 +181,7 @@
 
   @include tablets {
     &::after {
-      top: rem(8px);
+      top: rem(14px);
       left: rem(-80px);
     }
   }
@@ -182,8 +192,8 @@
   margin-bottom: rem(10px);
 
   @include tablets {
-      margin-top: rem(35px);
-      margin-left: rem(-65px);
+      margin-top: rem(45px);
+      margin-left: rem(-62px);
   }
 }
 
@@ -205,6 +215,10 @@
     text-align: center;
     margin-bottom: rem(34px);
   }
+
+  @include phones {
+    font-size: 50px;
+  }
 }
 
 .slider__text {
@@ -221,8 +235,10 @@
     min-width: rem(500px);
     margin: 0 auto;
     margin-bottom: rem(50px);
+  }
 
-
+  @include phones {
+    font-size: 14px;
   }
 }
 
@@ -250,7 +266,7 @@
   margin-left: rem(25px);
 }
 
-.slider-left {
+.slider__left {
   @include tablets {
     display: flex;
   }
@@ -267,6 +283,14 @@
     justify-content: center;
   }
 }
+
+.slide {
+  @include tablets {
+
+
+  }
+}
+
 
 
 
