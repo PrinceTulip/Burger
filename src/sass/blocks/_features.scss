@@ -62,6 +62,7 @@
 }
 
 .features__item {
+  width: 33%;
   @include phones {
     display: flex;
     width: 100%;

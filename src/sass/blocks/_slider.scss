@@ -79,64 +79,67 @@
   font-weight: 500;
 }
 
-.structure__product--beef::after {
+.structure__product-imgbeef {
   position: absolute;
   content: '';
   top:  rem(-7px);
   left: rem(-5px);
-  width: rem(60px);
-  height: rem(50px);
-  background: url(../img/beef.svg) no-repeat;
+  width: rem(44px);
+  height: rem(39px);
+  fill: #e25028;
 }
 
-.structure__product--buns::after {
+.structure__product-imgbuns {
   position: absolute;
   content: '';
   top:  rem(-7px);
   left: rem(-5px);
-  width: rem(60px);
-  height: rem(50px);
-  background: url(../img/buns.svg) no-repeat;
+  width: rem(48px);
+  height: rem(30px);
+  fill: #f8b43a;
 }
 
-.structure__product--salad::after {
+.structure__product-imgsalad {
   position: absolute;
   content: '';
   top:  rem(-7px);
   left: rem(-5px);
-  width: rem(60px);
-  height: rem(50px);
-  background: url(../img/salad.svg) no-repeat;
+  width: rem(38px);
+  height: rem(38px);
+  fill: #8cc141;
+
+
 }
 
-.structure__product--sauce::after {
+.structure__product-imgsauce {
   position: absolute;
   content: '';
   top:  rem(-7px);
   left: rem(-5px);
-  width: rem(60px);
-  height: rem(50px);
-  background: url(../img/sauce.svg) no-repeat;
+  width: rem(41px);
+  height: rem(43px);
+  fill: #e25028;
+
 }
 
-.structure__product--vegetables::after {
+.structure__product-imgvegetables {
    position: absolute;
    content: '';
    top:   rem(-7px);
    left:  rem(-5px);
-   width:  rem(60px);
-   height: rem(50px);
-   background: url(../img/cucumber.svg) no-repeat;
+   width:  rem(38px);
+   height: rem(38px);
+   fill: #8ac03e;
  }
 
-.structure__product--cheese::after {
+.structure__product-imgcheese {
   position: absolute;
   content: '';
   top:  rem(-7px);
   left: rem(-5px);
-  width: rem(60px);
-  height: rem(50px);
-  background: url(../img/cheese.svg) no-repeat;
+  width: rem(39px);
+  height: rem(34px);
+  fill: #f8b43a;
 }
 
 .structure__weight {
@@ -168,16 +171,6 @@
   display: inline-block;
   margin-left: rem(16px);
   margin-top: rem(-13px);
-  
-  &::after {
-    position: absolute;
-    content: '';
-    top:  rem(-25px);
-    left:  rem(-15px);
-    width: rem(80px);
-    height: rem(80px);
-    background: url("../img/kkal.svg") no-repeat;
-  }
 
   @include tablets {
     &::after {
@@ -185,6 +178,17 @@
       left: rem(-80px);
     }
   }
+}
+
+.structure-calories__img-kall {
+  position: absolute;
+  content: '';
+  top:  rem(-25px);
+  left:  rem(-15px);
+  width: rem(60px);
+  height: rem(60px);
+  fill: #ffff;
+
 }
 
 .structure__number {
@@ -284,12 +288,18 @@
   }
 }
 
-.slide {
-  @include tablets {
-
-
-  }
+.structure__img-burger {
+  width: 46px;
+  height: 46px;
+  fill: #fff
 }
+
+.slide__img-kal {
+  width: 60px;
+  height: 60px;
+  fill: #fad39d;
+}
+
 
 
 
