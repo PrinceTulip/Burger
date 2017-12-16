@@ -8,11 +8,10 @@
 @import "settings/slick-theme";
 
 
-@import "blocks/header";
-@import "blocks/promo";
-@import "blocks/features";
-@import "blocks/slider";
-@import "blocks/modal";
+
+@import "blocks/*.scss";
+
+
 
 
 
