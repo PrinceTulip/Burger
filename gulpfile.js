@@ -52,10 +52,6 @@ function htmls() {
 
 function img() {
     return gulp.src(paths.src + 'img/**/*.{png,jpg,jpeg}')
-        .pipe(tinypng({
-            key: 'tNK8DHr7L24S5Ygz3BsfqDqn0w0yJzpn',
-            log: true
-        }))
         .pipe(gulp.dest(paths.build + "img"));
 }
 const config = {
@@ -67,6 +63,14 @@ const config = {
 };
  function sprite() {
   return gulp.src(paths.src + 'img/*.svg')
+  .pipe(cheerio({ 
+    run: function($) { 
+    $('use').removeAttr('xlink:href'); 
+    $('[fill]').removeAttr('fill'); 
+    $('[stroke]').removeAttr('stroke'); 
+    $('[style]').removeAttr('style'); 
+    }, 
+    })) 
     // минифицируем svg
     .pipe(svgmin({
       js2svg: {
@@ -74,14 +78,6 @@ const config = {
       }
     }))
     // удалить все атрибуты fill, style and stroke в фигурах
-    .pipe(cheerio({
-      run: function($) {
-        $('[fill]').removeAttr('fill');
-        $('[stroke]').removeAttr('stroke');
-        $('[style]').removeAttr('style');
-      },
-   
-    }))
     // cheerio плагин заменит, если появилась, скобка '&gt;', на нормальную.
     .pipe(replace('&gt;', '>'))
     // build svg sprite
