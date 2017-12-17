@@ -1,0 +1,42 @@
+.menu {
+  position: relative;
+  background: url("../img/background-menu.jpg") center no-repeat;
+  background-size: cover;
+  padding-top: 80px;
+  padding-left: 90px;
+}
+
+.menu-row {
+  height: 100%;
+}
+
+.menu__list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu__item {
+  width: 80px;
+  height: 100%;
+}
+
+.menu__link {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+}
+
+.menu__link--background-1 {
+  background: url("../img/background-menu-1.jpg") no-repeat center;
+}
+
+.menu__text {
+  display: inline-block;
+  transform: rotate(-90deg);
+}
