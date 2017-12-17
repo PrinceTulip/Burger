@@ -12,6 +12,7 @@ const svgSprite = require('gulp-svg-sprite');
 const svgmin = require('gulp-svgmin');
 const cheerio = require('gulp-cheerio');
 const replace = require('gulp-replace');
+const plumber = require('gulp-plumber');
 
 
 const concat = require('gulp-concat');
@@ -30,18 +31,22 @@ function styles() {
         .pipe(sassGlob())
         .pipe(sass()) // { outputStyle: 'compressed' }
         .pipe(autoprefixer())
+        .pipe(plumber())
         .pipe(cleanCSS())
         .pipe(rigger())
         .pipe(rename({ suffix: ".min" }))
         .pipe(gulp.dest(paths.build + 'css/'))
+
 }
 
 
 function scripts() {
     return gulp.src(paths.src + 'js/*.js')
+        .pipe(plumber())
         .pipe(uglify())
         .pipe(concat('main.min.js'))
         .pipe(gulp.dest(paths.build + 'js/'))
+
 }
 
 function htmls() {
@@ -51,7 +56,7 @@ function htmls() {
 
 
 function img() {
-    return gulp.src(paths.src + 'img/**/*.{png,jpg,jpeg}')
+    return gulp.src(paths.src + 'img/**/*')
         .pipe(gulp.dest(paths.build + "img"));
 }
 const config = {
@@ -98,7 +103,7 @@ function watch() {
     gulp.watch(paths.src + 'sass/**/*.scss', styles);
     gulp.watch(paths.src + 'js/*.js', scripts);
     gulp.watch(paths.src + '*.html', htmls);
-    gulp.watch(paths.src + 'src/img/*', img);
+    gulp.watch(paths.src + 'src/img/**/*', img);
 }
 
 function serve() {

@@ -11,17 +11,18 @@ close.addEventListener('click', function (evt) {
     modal.classList.remove('modal-show');
 });
 
+$(function() {
+    $(".team__link").on("click", function(e) {
+        e.preventDefault();
+        var $this = $(e.currentTarget);
+        var item = $this.closest(".team__item");
+        var teamRow = $(".team-row");
 
-
-$(document).ready(function(){
-    $('.slider').slick({
-
-});
-});
-
-$('.multiple-items').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3
+        item
+            .toggleClass("team__item--open")
+            .siblings()
+            .removeClass("team__item--open");
+        teamRow.outerHeight();
+    });
 });
 
