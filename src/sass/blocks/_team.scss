@@ -8,21 +8,21 @@
   position: absolute;
   width: 49%;
   background: rgba(#2f3234, 0.9);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  padding-top: 87px;
-  padding-left: 80px;
+  top: rem(0px);
+  right: rem(0px);
+  bottom: rem(0px);
+  padding-top: rem(87px);
+  padding-left: rem(80px);
 }
 
 .team__list {
-  margin: 0;
-  padding: 0;
+  margin: rem(0px);
+  padding: rem(0px);
   list-style: none;
 }
 
 .team__item {
-  margin-bottom: 40px;
+  margin-bottom: rem(40px);
 
   &--open {
     .team-row {
@@ -34,7 +34,7 @@
 
       &::after {
         transform: rotate(180deg);
-        top: 3px;
+        top: rem(3px);
       }
     }
   }
@@ -45,43 +45,43 @@
   position: relative;
   color: $white;
   font-family: $Gagalin;
-  font-size: 14px;
+  font-size: rem(14px);
   text-decoration: none;
-  padding-left: 20px;
+  padding-left: rem(20px);
 
   &::after {
     position: absolute;
     content: '';
-    top: 7px;
-    left:  0px;
-    border: 5px solid transparent;	border-top: 5px solid $orange;
+    top: rem(7px);
+    left:  rem(0px);
+    border: rem(5px) solid transparent;	border-top: rem(5px) solid $orange;
   }
 
 }
 
 .team-row {
   display: none;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: rem(15px);
+  margin-bottom: rem(15px);
 }
 
 .team-row__left {
-  margin-right: 20px;
+  margin-right: rem(20px);
   font-family: $Ubuntu;
 }
 
 .team__title {
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
 }
 
 .team__desc {
-  padding-right: 180px;
+  padding-right: rem(180px);
   font-weight: 300;
 }
 
 .team-row__right {
-  margin-top: -5px;
+  margin-top: rem(-5px);
 }
 
 

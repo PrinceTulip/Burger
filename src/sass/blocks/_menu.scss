@@ -2,8 +2,8 @@
   position: relative;
   background: url("../img/background-menu.jpg") center no-repeat;
   background-size: cover;
-  padding-top: 80px;
-  padding-left: 90px;
+  padding-top: rem(80px);
+  padding-left: rem(90px);
 }
 
 .menu-row {
@@ -22,7 +22,7 @@
 }
 
 .menu__item {
-  width: 80px;
+  width: rem(80px);
   height: 100%;
 }
 
