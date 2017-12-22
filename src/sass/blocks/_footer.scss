@@ -1,0 +1,105 @@
+.footer {
+  background: url("../img/bgf.jpg") center no-repeat;
+  background-size: cover;
+  padding-top: 10px;
+}
+
+.footer-row {
+  justify-content: space-between;
+}
+
+.footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__address {
+  font-weight: 300;
+  color: $white;
+  text-decoration: none;
+}
+
+.footer__number {
+  position: relative;
+  color: #e45028;
+  font-weight: 700;
+  text-decoration: none;
+  padding-left: rem(20px);
+  
+  &::after {
+    position: absolute;
+    content: '';
+    top: rem(5px);
+    left: rem(1px);
+    width: rem(15px);
+    height: rem(15px);
+    background: url("../img/phone.png") no-repeat;
+  }
+}
+
+
+
+
+
+
+.footer__social-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.footer__social-item {
+  margin-right: 20px;
+}
+
+.footer__social-btn {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  font-size: 0;
+}
+
+.footer__social-media {
+  fill: $white;
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+.footer__social-vk {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+}
+
+.footer__social-fb {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  opacity: 0.9;
+}
+
+.footer__social-inst {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+}
+
+.footer__social-twitter {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+}
+
+
+
+

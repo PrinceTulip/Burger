@@ -493,13 +493,10 @@
             </div>
           </label>
           <label class="delivery__block delivery__block--ml">
-            <div class="row">
-              <div class="delivery-checkbox__title"></div>
-              <div class="delivery-checkbox__input"></div>
+              <input class="delivery__custom-checkbox" type="checkbox">
+            <div class="delivery__checkbox-title">
+              Не перезванивать
             </div>
-            <label class="delivery__label">
-              <input class="delivery__custom-checkbox" type="checkbox"> Не перезванивать
-            </label>
           </label>
           <label class="delivery__block">
             <div class="row row-mt">
@@ -511,6 +508,66 @@
     </div>
   </div>
 </section>
+  <section class="section">
+    <div id="map"></div>
+  </section>
+  <section class="footer">
+    <div class="container">
+      <div class="row footer-row">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__address" href="#">Санк-Петербург,ул.Бабушкина,д.12/1,15</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__number" href="#">+7 (812) 377-13-77</a>
+          </li>
+        </ul>
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-btn" href="#">
+              <span class="footer__social-icon">
+                <svg class="footer__social-media footer__social-vk">
+                  <use xlink:href="img/symbol/sprite.svg#vk"/>
+                </svg>
+              </span>
+              vkontakte
+            </a>
+          </li>
+
+          <li class="footer__social-media footer__social-item">
+            <a class="footer__social-btn" href="#">
+              <span class="footer__social-icon">
+                <svg class="footer__social-media footer__social-fb">
+                  <use xlink:href="img/symbol/sprite.svg#fb"/>
+                </svg>
+              </span>
+              facebook
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-btn" href="#">
+              <span class="footer__social-icon">
+                <svg class="footer__social-media footer__social-inst">
+                 <use xlink:href="img/symbol/sprite.svg#inst"/>
+                </svg>
+              </span>
+              instagram
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-btn" href="#">
+              <span class="footer__social-icon">
+                 <svg class="footer__social-media footer__social-twitter">
+                  <use xlink:href="img/symbol/sprite.svg#twitter"/>
+                </svg>
+              </span>
+              twitter
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 <div class="burger-modal">
   <button class="btn-close"></button>
   <div class="burger-modal__menu">
@@ -545,5 +602,8 @@
 </div>
 </div>
 </body>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbN0ahznAkiADHm0Q7WhOlQy-xl15EJj4&callback=initMap">
+</script>
 <script src="js/main.min.js"></script>
 </html>

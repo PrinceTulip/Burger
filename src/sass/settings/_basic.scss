@@ -18,6 +18,11 @@ body {
   overflow: hidden;
 }
 
+.section {
+  height: 100vh;
+  min-height: rem(650px);
+}
+
 html {
   font-size: 16px;
 
@@ -42,11 +47,11 @@ html {
 }
 
 .btn {
-  padding: 9.5px 13.5px;
+  padding: rem(9.5px) rem(13.5px);
   background: #e45028;
   border: none;
   outline: none;
-  border-radius: 4px;
+  border-radius: rem(4px);
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
@@ -54,7 +59,7 @@ html {
 
 .section-title {
   font-family: "Gagalin", Arial, sans-serif;
-  font-size: 72px;
+  font-size: rem(72px);
   margin: 0;
   line-height: rem(64px);
   margin-bottom: rem(80px);

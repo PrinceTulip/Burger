@@ -113,34 +113,11 @@
   padding-left: rem(20px);
   background: #ffffff;
   border-radius: 0;
-}
-
-.delivery__label input[type="checkbox"] {
-  position: absolute;
-  display: inline-block;
-  outline: none;
-  top: rem(4px);
-  left: rem(2px);
-  width: rem(16px);
-  height: rem(15px);
-  border-radius: rem(0px);
-}
-
-.delivery__label input[type="checkbox"]:checked {
-  content: "";
-  position: absolute;
-  width: rem(16px);
-  height: rem(15px);
-  top: rem(4px);
-  left: rem(2px);
+  display: none;
 }
 
 .delivery__block--ml {
   margin-left: rem(-20px);
-}
-
-.row-mt {
-  margin-top: rem(20px);
 }
 
 .delivery__block .btn {
@@ -155,6 +132,50 @@
   cursor: pointer;
 }
 
+.delivery__label--mt {
+  margin-top: rem(-22px);
+}
+
+.row-mt {
+  margin-top: rem(20px);
+}
+
+.delivery__checkbox-title {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding-left: rem(24px);
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: rem(15px);
+    height: rem(15px);
+    top: rem(2px);
+    left: rem(0px);
+    background: $white;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: rem(11px);
+    height: rem(9px);
+    top: rem(6px);
+    left: rem(3px);
+    background: url("../img/checkbox-checked.png") no-repeat;
+    z-index: 10;
+    opacity: 0;
+  }
+}
+
+.delivery__custom-checkbox:checked ~ .delivery__checkbox-title {
+
+  &::before {
+    opacity: 1;
+  }
+
+}
 
 
 
