@@ -15,9 +15,18 @@
 }
 
 .footer__address {
+  position: relative;
   font-weight: 300;
   color: $white;
   text-decoration: none;
+}
+
+.footer__address-svg {
+  position: absolute;
+  width: 12px;
+  height: 11px;
+  fill: #e45028;
+  top: 30px;
 }
 
 .footer__number {
@@ -26,21 +35,7 @@
   font-weight: 700;
   text-decoration: none;
   padding-left: rem(20px);
-  
-  &::after {
-    position: absolute;
-    content: '';
-    top: rem(5px);
-    left: rem(1px);
-    width: rem(15px);
-    height: rem(15px);
-    background: url("../img/phone.png") no-repeat;
-  }
 }
-
-
-
-
 
 
 .footer__social-list {

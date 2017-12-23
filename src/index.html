@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Burger</title>
-  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <div class="wrap">
@@ -428,7 +428,7 @@
     <div class="section-title big-heading">Закажите Доставку</div>
     <div class="row delivery-row">
       <div class="row__left">
-        <div class="row">
+        <div class="row row--minus-top">
           <label class="delivery__block">
                 <div class="delivery__title">
                   Имя
@@ -448,7 +448,7 @@
           </div>
             <input class="delivery__input">
         </label>
-        <div class="row row--margin_top">
+        <div class="row row--margin-top">
           <label class="delivery__block">
             <div class="delivery__title">
               Дом
@@ -485,10 +485,16 @@
           <label class="delivery__block">
             <div class="row row-mb">
               <label class="delivery__label">
-                <input class="delivery__custom-radio" type="radio" name="pay"> Потребуется сдача
+                <input class="delivery__custom-radio" type="radio" name="pay">
+                <div class="delivery__radio-title">
+                  Потребуется сдача
+                </div>
               </label>
               <label class="delivery__label">
-                <input class="delivery__custom-radio"  type="radio" name="pay"> Оплата по карте
+                <input class="delivery__custom-radio"  type="radio" name="pay">
+                <div class="delivery__radio-title">
+                  Оплата по карте
+                </div>
               </label>
             </div>
           </label>
@@ -498,6 +504,7 @@
               Не перезванивать
             </div>
           </label>
+
           <label class="delivery__block">
             <div class="row row-mt">
               <button class="btn">Заказать</button>
@@ -516,10 +523,16 @@
       <div class="row footer-row">
         <ul class="footer__list">
           <li class="footer__item">
-            <a class="footer__address" href="#">Санк-Петербург,ул.Бабушкина,д.12/1,15</a>
+            <div class="footer__address">Санк-Петербург,ул.Бабушкина,д.12/1,15
+              <span class="footer__address-icon">
+                <svg class="footer__address-svg">
+                  <use xlink:href="img/symbol/sprite.svg#phone"/>
+                </svg>
+              </span>
+            </div>
           </li>
           <li class="footer__item">
-            <a class="footer__number" href="#">+7 (812) 377-13-77</a>
+            <div class="footer__number">+7 (812) 377-13-77</div>
           </li>
         </ul>
         <ul class="footer__social-list">
@@ -533,7 +546,6 @@
               vkontakte
             </a>
           </li>
-
           <li class="footer__social-media footer__social-item">
             <a class="footer__social-btn" href="#">
               <span class="footer__social-icon">
@@ -603,7 +615,7 @@
 </div>
 </body>
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbN0ahznAkiADHm0Q7WhOlQy-xl15EJj4&callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbN0ahznAkiADHm0Q7WhOlQy-xl15EJj4&callback=initMap">
 </script>
-<script src="js/main.min.js"></script>
+<script src="js/main.js"></script>
 </html>

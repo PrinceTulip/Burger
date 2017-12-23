@@ -5,18 +5,18 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
 const cleanCSS = require('gulp-cleancss');
-const autoprefixer = require('gulp-autoprefixer');
-const rigger = require('gulp-rigger');
-const tinypng = require('gulp-tinypng-compress');
+//const autoprefixer = require('gulp-autoprefixer');
+//const rigger = require('gulp-rigger');
+//const tinypng = require('gulp-tinypng-compress');
 const svgSprite = require('gulp-svg-sprite');
 const svgmin = require('gulp-svgmin');
 const cheerio = require('gulp-cheerio');
 const replace = require('gulp-replace');
 
 
-const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
-const rename = require('gulp-rename');
+//const concat = require('gulp-concat');
+//const uglify = require('gulp-uglify');
+//const rename = require('gulp-rename');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 
@@ -29,18 +29,18 @@ function styles() {
     return gulp.src(paths.src + 'sass/main.scss')
         .pipe(sassGlob())
         .pipe(sass()) // { outputStyle: 'compressed' }
-        .pipe(autoprefixer())
+        //.pipe(autoprefixer())
         .pipe(cleanCSS())
-        .pipe(rigger())
-        .pipe(rename({ suffix: ".min" }))
+        //.pipe(rigger())
+        //.pipe(rename({ suffix: ".min" }))
         .pipe(gulp.dest(paths.build + 'css/'))
 }
 
 
 function scripts() {
     return gulp.src(paths.src + 'js/*.js')
-        .pipe(uglify())
-        .pipe(concat('main.min.js'))
+        //.pipe(uglify())
+        //.pipe(concat('main.min.js'))
         .pipe(gulp.dest(paths.build + 'js'))
 }
 
