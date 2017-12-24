@@ -1,17 +1,29 @@
 .footer {
   background: url("../img/bgf.jpg") center no-repeat;
   background-size: cover;
-  padding-top: 10px;
+  padding-top: rem(10px);
 }
 
 .footer-row {
   justify-content: space-between;
+
+  @include tablets {
+    padding: rem(0px) rem(20px);
+  }
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: rem(0px) rem(0px);
+  }
+
 }
 
 .footer__list {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: rem(0px);
+  padding: rem(0px);
 }
 
 .footer__address {
@@ -19,14 +31,30 @@
   font-weight: 300;
   color: $white;
   text-decoration: none;
+
+  @include phones {
+    margin-top: rem(20px);
+  }
 }
 
 .footer__address-svg {
+
   position: absolute;
-  width: 12px;
-  height: 11px;
+  width: rem(12px);
+  height: rem(11px);
   fill: #e45028;
-  top: 30px;
+  top: rem(30px);
+
+  @include tablets {
+    top: rem(35px);
+  }
+
+  @include phones {
+    top: 32px;
+    left: rem(70px);
+
+  }
+
 }
 
 .footer__number {
@@ -35,28 +63,37 @@
   font-weight: 700;
   text-decoration: none;
   padding-left: rem(20px);
+
+  @include phones {
+    padding: rem(0px);
+  }
 }
 
 
 .footer__social-list {
   display: flex;
-  margin: 0;
-  padding: 0;
+  margin: rem(0px);
+  padding: rem(0px);
   list-style: none;
   align-items: center;
-  margin-bottom: 9px;
+  margin-bottom: rem(9px);
+
+  @include phones {
+    margin-top: rem(15px);
+    margin-bottom: rem(20px);
+  }
 }
 
 .footer__social-item {
-  margin-right: 20px;
+  margin-right: rem(20px);
 }
 
 .footer__social-btn {
   position: relative;
   text-decoration: none;
   display: inline-block;
-  width: 23px;
-  height: 23px;
+  width: rem(23px);
+  height: rem(23px);
   font-size: 0;
 }
 
@@ -72,27 +109,27 @@
 
 .footer__social-vk {
   position: absolute;
-  width: 23px;
-  height: 23px;
+  width: rem(23px);
+  height: rem(23px);
 }
 
 .footer__social-fb {
   position: absolute;
-  width: 23px;
-  height: 23px;
+  width: rem(23px);
+  height: rem(23px);
   opacity: 0.9;
 }
 
 .footer__social-inst {
   position: absolute;
-  width: 23px;
-  height: 23px;
+  width: rem(23px);
+  height: rem(23px);
 }
 
 .footer__social-twitter {
   position: absolute;
-  width: 23px;
-  height: 23px;
+  width: rem(23px);
+  height: rem(23px);
 }
 
 

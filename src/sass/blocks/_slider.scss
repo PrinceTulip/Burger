@@ -22,6 +22,10 @@
     background: #e35028;
   }
 
+  @include tablets {
+    margin-left: 23px;
+  }
+
   @include phones {
     padding-right: 15px;
     padding-left: 15px;
@@ -168,9 +172,7 @@
   font-family: $Gagalin;
   color: $white;
   opacity: .5;
-  display: inline-block;
-  margin-left: rem(16px);
-  margin-top: rem(-13px);
+
 
   @include tablets {
     &::after {
@@ -180,20 +182,24 @@
   }
 }
 
+
 .structure-calories__img-kall {
   position: absolute;
   content: '';
-  top:  rem(-25px);
-  left:  rem(-15px);
-  width: rem(60px);
-  height: rem(60px);
+  top:  -23px;
+  left:  -17px;
+  width: rem(70px);
+  height: rem(70px);
   fill: #ffff;
+
+  @include tablets {
+
+  }
 
 }
 
 .structure__number {
   font-size: rem(20px);
-  margin-bottom: rem(10px);
 
   @include tablets {
       margin-top: rem(45px);

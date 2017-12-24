@@ -12,9 +12,7 @@
     <div class="container">
       <div class="row header-main-row">
         <div class="logo">
-          <svg class="logo-img">
-            <use xlink:href="#logo"/>
-          </svg>
+          <img src="img/logo.svg" class="logo-img">
         </div>
         <nav class="navigation">
           <ul class="navigation__list">
@@ -467,7 +465,7 @@
             </div>
             <input class="delivery__input">
           </label>
-          <label class="delivery__block delivery__block--mr">
+          <label class="delivery__block delivery__block--display_none delivery__block--mr">
             <div class="delivery__title">
               Этаж
             </div>
@@ -498,13 +496,14 @@
               </label>
             </div>
           </label>
-          <label class="delivery__block delivery__block--ml">
-              <input class="delivery__custom-checkbox" type="checkbox">
-            <div class="delivery__checkbox-title">
-              Не перезванивать
-            </div>
-          </label>
-
+          <div class="row row--text__center">
+            <label class="delivery__block delivery__block--ml">
+                <input class="delivery__custom-checkbox" type="checkbox">
+              <div class="delivery__checkbox-title">
+                Не перезванивать
+              </div>
+            </label>
+          </div>
           <label class="delivery__block">
             <div class="row row-mt">
               <button class="btn">Заказать</button>

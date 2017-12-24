@@ -3,31 +3,49 @@
   background-size: cover;
   padding-top: rem(90px);
   padding-bottom: rem(80px);
+
+  @include phones {
+    padding-top: rem(0px);
+    padding-bottom: rem(0px);
+  }
 }
 
 .big-heading {
   text-align: center;
+
+  @include phones {
+    font-size: rem(50px);
+  }
 }
 
 .delivery-row {
-  justify-content: space-between;
   align-items: center;
   font-weight: 300;
 
   @include tablets {
     flex-direction: column;
   }
+
+  @include phones {
+    align-items: flex-start;
+  }
+  
 }
 
 .row__left {
   flex-direction: column;
   width: 50%;
   margin-right: rem(20px);
-  margin-bottom: rem(40px);
+  margin-bottom: rem(85px);
 
   @include tablets {
     margin-bottom: rem(0px);
   }
+
+  @include phones {
+    width: 100%;
+  }
+
 }
 
 .row--minus-top {
@@ -46,6 +64,12 @@
     margin-left: rem(-20px);
     margin-top: rem(-13px);
   }
+
+  @include phones {
+    margin: 0;
+    width: 100%;
+
+  }
 }
 
 .delivery__input {
@@ -59,7 +83,6 @@
 
 .delivery__block {
   margin-right: rem(20px);
-  flex-grow: 1;
 }
 
 .delivery__title {
@@ -68,15 +91,27 @@
 
 .row--margin-top {
   margin-top: rem(15px);
+
 }
 
 .delivery__input--pt {
   padding-bottom: rem(80px);
+
+  @include phones {
+    padding-bottom: 40px;
+  }
 }
 
 .delivery__block--mr {
   margin-right: rem(0px);
   flex-grow: 1;
+}
+
+.delivery__block--display_none {
+
+   @include phones {
+     display: none;
+   }
 }
 
 .delivery__custom-radio {
@@ -93,8 +128,8 @@
     content: '';
     width: rem(15px);
     height: rem(15px);
-    top: rem(2px);
-    left: rem(-23px);
+    top: 2px;
+    left: -23px;
     background: $white;
     border-radius: 50%;
   }
@@ -104,8 +139,8 @@
     content: '';
     width: rem(7px);
     height: rem(7px);
-    top: rem(6px);
-    left: rem(-19px);
+    top: 6px;
+    left: -19px;
     background: red;
     z-index: 10;
     opacity: 0;
@@ -114,11 +149,12 @@
 
   @include  tablets {
     &::after {
-      top: 4px;
+      top: 6px;
     }
   }
 
   @include tablets {
+
     &::before {
       top: 8px;
       left: -17px;
@@ -126,6 +162,24 @@
       height: 6px;
 
     }
+  }
+}
+
+.delivery__radio-title {
+
+  &::before {
+
+    @include tablets {
+      top: 9px;
+      left: -20px;
+    }
+
+    @include phones {
+      top: 8px;
+      left: -20px;
+    }
+
+
   }
 }
 
@@ -143,13 +197,18 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
-  margin-right: rem(20px);
+  margin-right: rem(9px);
   padding-left: rem(24px);
   cursor: pointer;
 }
 
 .row-mb {
   margin-bottom: rem(20px);
+
+  @include phones {
+    justify-content: center;
+    margin-bottom: rem(0px);
+  }
 }
 
 .delivery__custom-checkbox {
@@ -161,7 +220,6 @@
 }
 
 .delivery__block--ml {
-  margin-left: rem(-20px);
 }
 
 .delivery__block .btn {
@@ -182,6 +240,11 @@
 
 .row-mt {
   margin-top: rem(20px);
+
+  @include phones {
+    justify-content: center;
+    margin-top: rem(-5px);
+  }
 }
 
 .delivery__checkbox-title {
@@ -222,7 +285,18 @@
     &::before {
       left: 2px;
       top: 6px;
+
     }
+  }
+
+
+  @include phones {
+    &::before {
+      left: 1px;
+      top: 5px;
+      height: 10px;
+    }
+
   }
 }
 
@@ -231,6 +305,14 @@
   &::before {
     opacity: 1;
     transition: 0.2s;
+  }
+
+}
+
+.row--text__center {
+
+  @include phones {
+    justify-content: center;
   }
 
 }
