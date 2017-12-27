@@ -23,13 +23,15 @@
   }
 
   @include tablets {
-    margin-left: 23px;
+    position: absolute;
+    margin-left: 150px;
   }
 
   @include phones {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
     padding-top: 3px;
+    margin-left: 0px;
   }
 }
 
@@ -41,6 +43,7 @@
   @include phones {
     padding-bottom: 0;
     padding-top: 0;
+    margin-left: -5px;
   }
 }
 
@@ -111,8 +114,6 @@
   width: rem(38px);
   height: rem(38px);
   fill: #8cc141;
-
-
 }
 
 .structure__product-imgsauce {
@@ -123,7 +124,6 @@
   width: rem(41px);
   height: rem(43px);
   fill: #e25028;
-
 }
 
 .structure__product-imgvegetables {
@@ -193,7 +193,8 @@
   fill: #ffff;
 
   @include tablets {
-
+    top: 5px;
+    left: -70px;
   }
 
 }
@@ -202,7 +203,7 @@
   font-size: rem(20px);
 
   @include tablets {
-      margin-top: rem(45px);
+      margin-top: rem(25px);
       margin-left: rem(-62px);
   }
 }
@@ -297,13 +298,50 @@
 .structure__img-burger {
   width: 46px;
   height: 46px;
-  fill: #fff
+  fill: #fff;
+
+  @include phones {
+    height: 40px;
+
+  }
 }
 
 .slide__img-kal {
   width: 60px;
   height: 60px;
   fill: #fad39d;
+}
+
+.slide__img {
+
+  @include tablets {
+    margin-top: 66px;
+    margin-left: 110px;
+  }
+
+  @include phones {
+    margin-top: 66px;
+    margin-left: 30px;
+  }
+
+}
+
+.structure-text {
+
+  @include tablets {
+    margin-top: -6px;
+  }
+}
+
+.structure__img {
+  max-width: 100%;
+}
+
+.slide {
+
+  @include phones {
+    margin-top: -70px;
+  }
 }
 
 

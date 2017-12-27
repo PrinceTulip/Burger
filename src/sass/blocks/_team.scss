@@ -8,17 +8,46 @@
   position: absolute;
   width: 49%;
   background: rgba(#2f3234, 0.9);
-  top: rem(0px);
-  right: rem(0px);
-  bottom: rem(0px);
+  top: 0;
+  right: 0;
+  bottom: 0;
   padding-top: rem(87px);
   padding-left: rem(80px);
+
+  @include tablets {
+    width: 100%;
+  }
+
+  @include phones {
+    padding-top: rem(20px);
+    width: 100%;
+    padding-left: rem(8px);
+  }
+}
+
+.bigheading__team {
+  text-align: center;
+
+  @include phones {
+    font-size: rem(50px);
+    padding-bottom: rem(20px);
+    padding-top: rem(20px);
+  }
+
 }
 
 .team__list {
   margin: rem(0px);
   padding: rem(0px);
   list-style: none;
+
+  @include tablets {
+    text-align: center;
+  }
+
+  @include phones {
+    text-align: center;
+  }
 }
 
 .team__item {
@@ -34,7 +63,11 @@
 
       &::after {
         transform: rotate(180deg);
-        top: rem(3px);
+        top: 3px;
+
+        @include phones {
+          top: 4px;
+        }
       }
     }
   }
@@ -52,9 +85,22 @@
   &::after {
     position: absolute;
     content: '';
-    top: rem(7px);
-    left:  rem(0px);
+    top: 7px;
+    left:  0px;
     border: rem(5px) solid transparent;	border-top: rem(5px) solid $orange;
+  }
+
+  @include tablets {
+    font-size: 25px;
+  }
+
+  @include phones {
+    font-size: rem(25px);
+    &::after {
+      border: rem(7px) solid transparent;	border-top: rem(8px) solid $orange;
+      top: 10px;
+      left: -5px;
+    }
   }
 
 }
@@ -63,6 +109,16 @@
   display: none;
   margin-top: rem(15px);
   margin-bottom: rem(15px);
+
+  @include tablets {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @include phones {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .team-row__left {
@@ -73,15 +129,35 @@
 .team__title {
   font-weight: 700;
   margin-bottom: rem(15px);
+  font-size: rem(14px);
+
+  @include phones {
+    font-size: rem(14px);
+    font-weight: 700;
+  }
 }
 
 .team__desc {
   padding-right: rem(180px);
   font-weight: 300;
+
+  @include tablets {
+    padding-right: 0;
+  }
 }
 
 .team-row__right {
   margin-top: rem(-5px);
+}
+
+.team__img {
+  margin-right: rem(20px);
+  margin-left: rem(20px);
+
+  @include phones {
+    margin-right: rem(5px);
+    margin-left: rem(0px);
+  }
 }
 
 

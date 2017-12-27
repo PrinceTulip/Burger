@@ -128,7 +128,7 @@
     content: '';
     width: rem(15px);
     height: rem(15px);
-    top: 2px;
+    top: 3px;
     left: -23px;
     background: $white;
     border-radius: 50%;
@@ -139,7 +139,7 @@
     content: '';
     width: rem(7px);
     height: rem(7px);
-    top: 6px;
+    top: 7px;
     left: -19px;
     background: red;
     z-index: 10;
@@ -148,21 +148,13 @@
   }
 
   @include  tablets {
+
     &::after {
       top: 6px;
+      left: -20px;
     }
   }
 
-  @include tablets {
-
-    &::before {
-      top: 8px;
-      left: -17px;
-      width: 6px;
-      height: 6px;
-
-    }
-  }
 }
 
 .delivery__radio-title {
@@ -171,14 +163,15 @@
 
     @include tablets {
       top: 9px;
-      left: -20px;
+      left: -16px;
+      width: 6px;
+      height: 6px;
     }
 
     @include phones {
       top: 8px;
-      left: -20px;
+      left: -17px;
     }
-
 
   }
 }
